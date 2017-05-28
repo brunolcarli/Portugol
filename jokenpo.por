@@ -1,9 +1,21 @@
 programa
 {
+	/*/////////////////////////////////////////////////////////////////////////
+	// Objetivo do algoritmo: Criar um jogo de pedra-papel-tesoura           //
+	// Entrada: nome de ate dois jogadores, jogada valida dentre pedra(PE),  //
+	//          papel (PA) ou tesoura (TE).                                  //
+	// Processamento: Calcular dez rodadas, o vencedor, o numero de vitorias,//
+	//                derrotas, empates. A formula do jogo é pedra vence     //
+	//                tesoura, tesoura vence papel, papel  vence pedra.      //
+	// Saida: Exibir o vencedor da rodada, o resultado da jogada, o vencedor //
+	//        no final e o total de vitorias, derrotas e empates             //
+	// Autor: Bruno L. Carli.                                                //
+	/////////////////////////////////////////////////////////////////////////*/
+	
+	
 
 	inclua biblioteca Texto //essa biblioteca permite formatarmos o texto, vamos utilizar o caixa_alta
 	inclua biblioteca Util //dessa biblioteca vamps utilizar o sorteia para a IA
-
 
 	/*///////////////////////////////////////////////////
 	//  FUNÇÃO JOGAR: recebe uma das possiveis jogadas//
@@ -111,6 +123,8 @@ programa
 					senao se(jogada1 == "PA" e jogada2 == "TE"){
 						escreva("Tesoura vence Papel\n")
 						escreva(jogador2, " venceu\n")
+						result_j1[1] += 1
+						result_j2[0] += 1
 					}
 					senao {
 						se(jogada1 == "TE" e jogada2 == "PE"){
@@ -156,14 +170,13 @@ programa
 			escreva("Empate\n")
 			escreva("++++++++++++++++++++++++++++++++++++++++++\n\n")
 		} //fim_se dos resultados
-	}
+	}//fim procedimento jogo
 
 	/*///////////////////////////////////////////////////////////////////////// 
 	/*                PROGRAMA PRINCIPAL                                   //
 	///////////////////////////////////////////////////////////////////////*/
-	funcao inicio()
-	{
-//programa principal
+	funcao inicio() 
+	{ //programa principal
 		cadeia jogador1, jogador2, jogada1, jogada2
 		inteiro modo_jogo
 
