@@ -182,7 +182,7 @@ Inicio
    leia(modo_jogo)
 
    escolha(modo_jogo) //Escolha do modo de jogo
-   caso 1 //1player
+   caso 1
       escreval("++++++++++++++++++++++++++++++++++")
       escreval("Insira o nome do primeiro jogador")
       escreval("++++++++++++++++++++++++++++++++++")
@@ -190,7 +190,7 @@ Inicio
       jogador2 <- "IA"
       jogo(jogador1, jogador2, verdadeiro)
 
-   caso 2 //2player
+   caso 2
       escreval("++++++++++++++++++++++++++++++++++")
       escreval("Insira o nome do primeiro jogador")
       escreval("++++++++++++++++++++++++++++++++++")
